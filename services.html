@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasewe Contractors - Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="Images/logo.png" alt="Wasewe Contractors Logo">
+                <h1>Wasewe Contractors</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="owner.html">Owner</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <button id="register-btn">Register</button>
+                <button id="login-btn">Login</button>
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Architectural Services</h3>
+                        <ul>
+                            <li>Architectural design and planning</li>
+                            <li>Technical drawings and construction documentation</li>
+                            <li>3D visualization and presentation</li>
+                            <li>Building approvals and compliance support</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Construction & Building Works</h3>
+                        <ul>
+                            <li>Residential construction</li>
+                            <li>Commercial and institutional buildings</li>
+                            <li>Renovation, remodeling, and maintenance works</li>
+                            <li>Structural and finishing works</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Project Management</h3>
+                        <ul>
+                            <li>Project planning and scheduling</li>
+                            <li>Contractor coordination and supervision</li>
+                            <li>Quality control and site management</li>
+                            <li>Time, cost, and risk management</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Consultancy Services</h3>
+                        <ul>
+                            <li>Construction consultancy</li>
+                            <li>Development advisory</li>
+                            <li>Technical and financial project evaluation</li>
+                            <li>Cost estimation and budgeting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p>Email: wasewecontractors@gmail.com</p>
+                    <p>Phone: 0702625645</p>
+                    <p>Location: Kenya</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <p>&copy; 2025 Wasewe Contractors. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="registration-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Register for Wasewe Contractors</h2>
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="full-name">Full Name *</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Enter your company name">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password *</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="service-type">Service Type</label>
+                    <select id="service-type" name="service-type">
+                        <option value="">Select a service</option>
+                        <option value="architecture">Architecture</option>
+                        <option value="construction">Construction</option>
+                        <option value="project-management">Project Management</option>
+                        <option value="consultancy">Consultancy</option>
+                        <option value="other">Other / Not Listed</option>
+                    </select>
+                </div>
+                <div class="form-group" id="other-service-group" style="display: none;">
+                    <label for="other-service">Please specify your service</label>
+                    <input type="text" id="other-service" name="other-service" placeholder="Enter your service type">
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#" class="terms-link">Terms & Conditions</a> *</label>
+                </div>
+                <button type="submit" class="register-submit-btn">Register</button>
+            </form>
+            <div id="confirmation-message" class="confirmation-message" style="display: none;">
+                <p>Your account has been successfully created. Please verify your email to activate your account.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms and Conditions Modal -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content privacy-modal-content">
+            <span class="close-btn" id="terms-close-btn">&times;</span>
+            <h2>📄 TERMS AND CONDITIONS</h2>
+            <h3>WASEWE CONTRACTORS</h3>
+            <p><strong>Effective Date:</strong> 29 March 2026</p>
+            <p><strong>Website:</strong> Wasewe Contractors Official Website</p>
+
+            <h4>1. INTRODUCTION</h4>
+            <p>Welcome to Wasewe Contractors. These Terms and Conditions govern the use of our services, website, and all construction, engineering, architectural, and consultancy services provided by Wasewe Contractors.</p>
+            <p>By engaging our services, you confirm that you have read, understood, and agreed to be legally bound by these Terms.</p>
+
+            <h4>2. COMPLIANCE WITH PROFESSIONAL STANDARDS</h4>
+            <p>Wasewe Contractors operates in compliance with all applicable Kenyan construction and engineering regulations, including:</p>
+            <ul>
+                <li>National Construction Authority (NCA) requirements</li>
+                <li>Architectural Association of Kenya (AAK) guidelines</li>
+                <li>Engineers Board of Kenya (EBK) standards (where applicable)</li>
+                <li>County government building and planning regulations</li>
+                <li>Occupational Safety and Health Act (OSHA)</li>
+                <li>Environmental Management and Coordination Act (EMCA)</li>
+            </ul>
+            <p>All works are executed according to approved drawings, safety standards, and professional engineering practices.</p>
+
+            <h4>3. SERVICES</h4>
+            <p>Wasewe Contractors provides the following services:</p>
+            <ul>
+                <li>Building construction (residential, commercial, institutional)</li>
+                <li>Architectural design and drafting</li>
+                <li>Structural engineering works</li>
+                <li>Renovations and remodeling</li>
+                <li>Project management and supervision</li>
+                <li>Cost estimation and budgeting</li>
+                <li>Interior and exterior finishing</li>
+                <li>Plumbing, electrical, and mechanical works (through certified partners)</li>
+            </ul>
+            <p>We reserve the right to engage qualified subcontractors where necessary.</p>
+
+            <h4>4. PROJECT AGREEMENTS</h4>
+            <p>All projects shall be governed by a written agreement signed by both parties. The agreement will define:</p>
+            <ul>
+                <li>Scope of work</li>
+                <li>Project timeline</li>
+                <li>Payment terms</li>
+                <li>Materials specifications</li>
+                <li>Variations and changes</li>
+                <li>Termination conditions</li>
+            </ul>
+            <p>No verbal agreement shall be binding unless confirmed in writing.</p>
+
+            <h4>5. CLIENT RESPONSIBILITIES</h4>
+            <p>Clients agree to:</p>
+            <ul>
+                <li>Provide accurate project and site information</li>
+                <li>Ensure legal ownership or authorization of the site</li>
+                <li>Approve designs and variations in time</li>
+                <li>Make payments as agreed</li>
+                <li>Provide site access for project execution</li>
+            </ul>
+            <p>Delays caused by the client may affect timelines and costs.</p>
+
+            <h4>6. PAYMENT TERMS</h4>
+            <ul>
+                <li>A deposit may be required before commencement of work</li>
+                <li>Payments shall follow agreed project milestones</li>
+                <li>All payments must be made through official channels only</li>
+                <li>Late payments may result in suspension of work</li>
+                <li>Final handover is subject to full payment</li>
+            </ul>
+
+            <h4>7. VARIATIONS</h4>
+            <p>Any changes to the agreed scope of work must:</p>
+            <ul>
+                <li>Be made in writing</li>
+                <li>Be approved by both parties</li>
+                <li>Be priced separately if necessary</li>
+            </ul>
+            <p>Wasewe Contractors is not obligated to carry out additional work without approval.</p>
+
+            <h4>8. TIMELINES</h4>
+            <p>Project timelines are estimates and may be affected by:</p>
+            <ul>
+                <li>Weather conditions</li>
+                <li>Material availability</li>
+                <li>Client approvals</li>
+                <li>Site conditions</li>
+                <li>Government or regulatory delays</li>
+            </ul>
+            <p>We are not liable for delays caused by factors beyond our control.</p>
+
+            <h4>9. QUALITY ASSURANCE</h4>
+            <p>We commit to:</p>
+            <ul>
+                <li>Professional workmanship</li>
+                <li>Use of quality materials as agreed</li>
+                <li>Compliance with approved designs</li>
+                <li>Proper site supervision</li>
+            </ul>
+
+            <h4>10. SAFETY</h4>
+            <p>All projects comply with OSHA safety standards. Proper safety measures are enforced on-site. Clients and visitors must adhere to safety rules.</p>
+
+            <h4>11. LIABILITY</h4>
+            <p>Wasewe Contractors is not liable for:</p>
+            <ul>
+                <li>Unauthorized site interference</li>
+                <li>Defective client-provided materials or designs</li>
+                <li>Natural disasters or unforeseen events</li>
+                <li>Misuse or alteration of completed works</li>
+            </ul>
+            <p>Liability is limited to the value of the contract unless otherwise agreed.</p>
+
+            <h4>12. WARRANTIES</h4>
+            <p>Workmanship warranty is provided depending on project type and subject to proper maintenance and no unauthorized modifications.</p>
+
+            <h4>13. TERMINATION</h4>
+            <p>Contracts may be terminated due to:</p>
+            <ul>
+                <li>Breach of agreement</li>
+                <li>Non-payment</li>
+                <li>Mutual agreement</li>
+                <li>Force majeure events</li>
+            </ul>
+            <p>All completed works must be paid in full upon termination.</p>
+
+            <h4>14. INTELLECTUAL PROPERTY</h4>
+            <p>All designs, drawings, and project documents remain the property of Wasewe Contractors until full payment is made.</p>
+
+            <h4>15. SUBCONTRACTING</h4>
+            <p>We may engage qualified subcontractors for specialized works including electrical, plumbing, mechanical, and surveying services.</p>
+
+            <h4>16. DISPUTE RESOLUTION</h4>
+            <p>Disputes shall be resolved through:</p>
+            <ul>
+                <li>Amicable negotiation</li>
+                <li>Mediation</li>
+                <li>Arbitration under Kenyan law if necessary</li>
+            </ul>
+
+            <h4>17. GOVERNING LAW</h4>
+            <p>These Terms are governed by the laws of the Republic of Kenya.</p>
+
+            <h4>18. AMENDMENTS</h4>
+            <p>Wasewe Contractors reserves the right to update these Terms at any time. Changes will apply once posted on the website.</p>
+
+            <h4>19. CONTACT INFORMATION</h4>
+            <p>For questions, requests, or concerns regarding these Terms and Conditions, contact us:</p>
+            <p><strong>Wasewe Contractors</strong></p>
+            <p>📧 <strong>Email:</strong> wasewecontractors@gmail.com</p>
+            <p>📞 <strong>Phone:</strong> 0702625645</p>
+            <p>📍 <strong>Location:</strong> Kenya (Countrywide)</p>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
